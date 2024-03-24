@@ -4,17 +4,16 @@
 
 ## Getting started with the package
 
-There are multiple methods to get this package: 
-
 <details>
-
 <summary>Clone the package to some local folder. </summary>
+Common git clone: 
 
-``` shell
+``` 
 git clone https://github.com/DataIMLabs/MIE2024/
 ```
-  
-Note: this requires a GIT installation
+GitHUB CLI:
 
-
+``` 
+gh repo clone DataIMLabs/MIE2024
+```
 </summary>
