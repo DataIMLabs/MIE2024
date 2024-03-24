@@ -90,6 +90,19 @@ install.packages("rlang")
 </details>
 
 
+<details>
+<summary>Run an example</summary>
+
+```
+rm(list=ls())
+devtools::load_all()
+exampleBarcharts()
+```
+
+
+</details>
+
+
 ## 1. R in a production environment 
 
 <details>

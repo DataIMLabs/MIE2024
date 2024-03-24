@@ -16,6 +16,8 @@ library(magrittr)
 library(shiny)
 library(bslib)
 
+devtools::load_all()
+
 # Sample data
 dt <- data.table(type   = c('Cat owners', 'Dog owners', 'No pets'),  counts =  c(23, 17, 35)) 
  
@@ -41,19 +43,18 @@ layout(title = list(text = ''),
 code.ggplot2 <- "# ggplot2
 ggplot(dt, aes(x = type, y = counts)) +
 geom_bar(
-    stat  = 'identity', 
-    fill  = '#377CBF', 
-    color = '#377CBF',
-    size  = 1.5,
-    alpha = 0.6
+    stat       = 'identity', 
+    fill       = '#377CBF', 
+    color      = '#377CBF',
+    linewidth  = 1.5,
+    alpha      = 0.6
 ) +  
  labs(
-    x     = 'User type',
-    y     = 'Aantal',
-    title = ''
+    x          = 'User type',
+    y          = 'Aantal',
+    title      = ''
 ) +
 theme_minimal()
-
  
 "
 

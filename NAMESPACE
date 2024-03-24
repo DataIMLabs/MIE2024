@@ -2,6 +2,8 @@
 
 export("%>%")
 export(codeOutput)
+export(exampleBarcharts)
+export(examplePiecharts)
 export(renderCode)
 importFrom(data.table,":=")
 importFrom(data.table,.BY)
