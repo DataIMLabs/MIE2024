@@ -29,7 +29,20 @@ Feel free to contact the package maintainer ([david\@dataim.nl](mailto:david@dat
 ## Getting started with the MIE2024 package
 
 <details>
+<summary>Install R, RTools and RStudio</summary>
 
+Download and install the following toolchain (in order):
+
+<ol>
+<li>[R](https://cran.r-project.org/bin/windows/base/)</li>
+<li>[RTools](https://cran.r-project.org/bin/windows/Rtools/)</li>
+<li>[RStudio Desktop](https://posit.co/download/rstudio-desktop/)<li>
+</ol>
+
+</details>
+
+
+<details>
 <summary>Clone the package or download the package ZIP file</summary>
 
 Traditional git clone:
