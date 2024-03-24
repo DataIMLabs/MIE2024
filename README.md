@@ -24,7 +24,7 @@ Topics covered in this master class:
 </li> 
 </ul>
 
-Feel free to contact the package maintainer ([david\@dataim.nl](mailto:david@dataim.nl){.email}) for any technical matters or follow-up questions.
+Feel free to contact the package maintainer [david@dataim.nl](mailto:david@dataim.nl) for any technical matters or follow-up questions.
 
 ## Getting started with the MIE2024 package
 
@@ -33,10 +33,18 @@ Feel free to contact the package maintainer ([david\@dataim.nl](mailto:david@dat
 
 Download and install the following toolchain (in order):
 
+For windows: 
+
 <ol>
-<li>[R](https://cran.r-project.org/bin/windows/base/)</li>
-<li>[RTools](https://cran.r-project.org/bin/windows/Rtools/)</li>
-<li>[RStudio Desktop](https://posit.co/download/rstudio-desktop/)<li>
+    <li>
+        [R](https://cran.r-project.org/bin/windows/base/)
+    </li>
+    <li>
+        [RTools](https://cran.r-project.org/bin/windows/Rtools/)
+    </li>
+    <li>
+        [RStudio Desktop](https://posit.co/download/rstudio-desktop/)
+    </li>
 </ol>
 
 </details>
