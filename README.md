@@ -2,14 +2,26 @@
 
 ## Introduction
 
-At the MIE2024 conference, we presented a brief masterclass on R and Shiny. The masterclass was aimed at researchers working primarily with survey data. As we anticipated, two 45min sessions were hardly sufficient to cover all relevant topics in sufficient depth. We therefore decided to make our code examples public in the form of an R Package.
+At the MIE2024 conference, we presented a brief masterclass on R and Shiny. The masterclass was aimed at researchers working primarily with R in the context of analysing (market) research data (i.e., survey data). We assumed that most attendees had at least a basic understanding of statistics (descriptive and inferential) and that many had worked with R or Python before.  
 
-Topics covered: 
+As we anticipated, two 45min sessions were hardly sufficient to cover all relevant topics in sufficient depth. We therefore decided to make our code examples public in the form of an R Package. Furthermore, a more in-depth introductory course in R and Shiny will be released in the next weeks. 
+
+Topics covered in this master class:
 
 <ul>
-<li>R in a production environment</li>
-<li>Plotting charts with Plotly</li>
-<li>Shiny fundamentals</li> 
+<li>R in a production environment
+    <ul>
+        <li>Data handling</li>
+        <li>Charting</li>
+    </ul>
+</li>
+<li>Shiny fundamentals
+    <ul>
+        <li>ShinyAPP = UI + Server</li>
+        <li>Reactivity and Observers</li>
+        <li>Modules</li>
+    </ul>
+</li> 
 </ul>
 
 Feel free to contact the package maintainer ([david\@dataim.nl](mailto:david@dataim.nl){.email}) for any technical matters or follow-up questions.
@@ -35,11 +47,9 @@ gh repo clone DataIMLabs/MIE2024
 Zip download: [<https://github.com/DataIMLabs/MIE2024/archive/refs/heads/main.zip>]
 
 </summary>
-
 </details>
 
 <details>
-
 <summary>Install package requirements (if needed)</summary>
 
 Most likely, the following packages are already installed. 
@@ -59,13 +69,34 @@ install.packages("rlang")
 </details>
 
 
-## R in a production environment
+## R in a production environment 
 
-### Data handling 
+<details>
+<summary>Stand-alone scripts vs R Packages</summary>
+
+Using R as a scripting tool typically involves writing stand-alone script files executed in a sequential manner. Such scripts often start with library statements at the top to load necessary packages, followed by a mix of data manipulation, analysis, and visualization commands. This approach is suited for data analysis tasks where the workflow is linear, and the code is not intended for reuse or distribution. The audience for script files is generally analysts or data scientists who are conducting exploratory data analysis or developing a proof of concept.
+
+In contrast, making an R Package involves structuring R code, documentation, and data in a standardized format, enabling code reuse, sharing, and distribution. R packages include namespaces to manage function names and avoid conflicts, and they require documentation for each exported function, making the code easier to understand and use by others. Packages may also contain tests to ensure code reliability and vignettes for in-depth examples. The package methodology targets a broader audience, including developers and end-users looking for reliable and reusable R functions or sets of functions for specific tasks.
+
+The advantages of using the package methodology include enhanced code organization, ease of maintenance, and the ability to share your work with a wider community. Packages facilitate collaboration among developers and ensure that code can be easily updated and extended. Additionally, the use of packages promotes best practices in programming and software development, contributing to the overall quality and robustness of R code in the community.
+</details>
+
+
+<details>
+<summary>Data handling </summary>
+
+</details>
+
+
 
 We strongly favor data.table syntax instead of traditional base R code or tidyverse syntax for data handling. 
 
 See the examples in examples/dh to illustrate: 
+
+<details>
+<summary>Plotting</summary>
+
+
 
 ### Plotting
 
@@ -87,7 +118,7 @@ See the examples in examples/dh to illustrate:
 
 ```
 
-
+</details>
 
 ## Shiny fundamentals
 A Shiny APP comprises the following parts: 
