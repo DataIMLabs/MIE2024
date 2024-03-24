@@ -69,20 +69,27 @@ install.packages("rlang")
 </details>
 
 
-## R in a production environment 
+## 1. R in a production environment 
 
 <details>
 <summary>Stand-alone scripts vs R Packages</summary>
 
 In a production environment, having a standardized way of organizing source code can save a lot of time. There are generally two ways of organizing R code, namely (a) stand alone script files and (b) a package. We strongly favor the package approach for anything that is more than a simple example. Next, we outline the main differences: 
 
-**R as a scripting tool**
+**R as a scripting tool.**
 Using R as a scripting tool typically involves writing stand-alone script files executed in a sequential manner. Such scripts often start with library statements at the top to load necessary packages, followed by a mix of data manipulation, analysis, and visualization commands. This approach is suited for data analysis tasks where the workflow is linear, and the code is not intended for reuse or distribution. The audience for script files is generally analysts or data scientists who are conducting exploratory data analysis or developing a proof of concept.
 
-**Organizing code in an R package**
+**Organizing code in an R package.**
 In contrast, making an R Package involves structuring R code, documentation, and data in a standardized format, enabling code reuse, sharing, and distribution. R packages include namespaces to manage function names and avoid conflicts, and they require documentation for each exported function, making the code easier to understand and use by others. Packages may also contain tests to ensure code reliability and vignettes for in-depth examples. The package methodology targets a broader audience, including developers and end-users looking for reliable and reusable R functions or sets of functions for specific tasks.
 
 The advantages of using the package methodology include enhanced code organization, ease of maintenance, and the ability to share your work with a wider community. Packages facilitate collaboration among developers and ensure that code can be easily updated and extended. Additionally, the use of packages promotes best practices in programming and software development, contributing to the overall quality and robustness of R code in the community.
+
+Further reading: 
+
+[https://r-pkgs.org/]
+
+
+
 </details>
 
 
@@ -95,22 +102,7 @@ Base R is the foundational ecosystem that comes with R itself, providing a wide 
 The tidyverse, on the other hand, is a collection of R packages designed for data science, offering a coherent and fluent syntax to wrangle, analyze, and visualize data. Its core packages, like dplyr for data manipulation and ggplot2 for data visualization, follow a consistent philosophy centered around tidy data. The tidyverse is particularly popular among data scientists and analysts who prioritize readability and ease of use, making it ideal for those new to R or data science.
 
 Data.table excels in performance, particularly for large datasets, due to its design and programming paradigm that minimizes memory usage and optimizes execution speed. Its syntax, while powerful, has a steeper learning curve, which can be a barrier for new users but is highly valued by those working with large data sets where execution speed is critical. The primary audience for data.table includes data analysts, statisticians, and data engineers who require the high-performance computing capabilities it offers for big data tasks.
-
  
-
-</details>
-
-
-
-We strongly favor data.table syntax instead of traditional base R code or tidyverse syntax for data handling. 
-
-See the examples in examples/dh to illustrate: 
-
-<details>
-<summary>Plotting</summary>
-
-
-
 ### Plotting
 
 ```R
@@ -133,7 +125,34 @@ See the examples in examples/dh to illustrate:
 
 </details>
 
-## Shiny fundamentals
+## 2. Shiny fundamentals
+
+Shiny is a web application framework for R, allowing users to build interactive web applications directly from R. Shiny provides an extensive range of tools to create dynamic user interfaces in which users can interact with their data and visualizations in real-time. Shiny applications are highly versatile, ranging from simple data summaries to complex data analyses and visual models.
+
+The core advantage of Shiny is its ability to enable R users&emdash;who may not have web development experience&emdash;to deploy analyses or models as applications that can be shared on the web. This makes analytical results accessible to a broader audience, without requiring them to run R code locally.
+
+Shiny applications are built around two main components, namely the user interface (UI), which controls the layout and appearance of the app, and the server which includes the instructions to build the app's reactive (output) elements based on user input. 
+
+
+<summary>Basic structure of a Shiny APP</summary>
+
+
+``` R
+library(shiny)
+
+ui <- fluidPage(
+    # Show the user interface
+)
+
+server <- function(input, output, session) {
+    # Perform logic on input and output
+}
+
+shinyApp(ui, server) 
+```
+
+</details>
+
 A Shiny APP comprises the following parts: 
 
 ```mermaid
@@ -150,28 +169,6 @@ flowchart TD
 ```
 
 <details>
-
-<summary>Basic structure of a Shiny APP</summary>
-
-
-``` R
-library(shiny)
-
-ui <- fluidPage(
-    textOutput(outputId = "text")
-)
-
-server <- function(input, output, session) {
-    
-    output$text <- renderText({
-        "Hallo MIE2024"
-    })
-}
-
-shinyApp(ui, server) 
-```
-
-</details>
  
  
  
