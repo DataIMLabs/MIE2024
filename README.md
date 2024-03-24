@@ -5,7 +5,7 @@
 ## Getting started with the package
 
 <details>
-<summary>Clone the package to some local folder. </summary>
+<summary>Clone the package </summary>
 Common git clone: 
 
 ``` 
@@ -16,4 +16,13 @@ GitHUB CLI:
 ``` 
 gh repo clone DataIMLabs/MIE2024
 ```
-</summary>
+</summary> 
+
+<details>
+<summary>Install package requirements (if needed)</summary>
+
+``` R
+
+```
+
+</details>

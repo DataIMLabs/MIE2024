@@ -16,4 +16,8 @@ Imports:
     data.table,
     devtools,
     rlang,
-    shinyWidgets
+    shinyWidgets,
+    shiny,
+    plotly,
+    ggplot2,
+    magrittr
