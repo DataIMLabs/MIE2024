@@ -2,13 +2,19 @@
 
 ## Introduction
 
-At the MIE2024 conference, we presented a brief masterclass on R and Shiny. The masterclass was aimed at researchers working primarily with survey data.
+At the MIE2024 conference, we presented a brief masterclass on R and Shiny. The masterclass was aimed at researchers working primarily with survey data. As we anticipated, two 45min sessions were hardly sufficient to cover all relevant topics in sufficient depth. We therefore decided to make our code examples public in the form of an R Package.
 
-As we anticipated, two 45min sessions were hardly sufficient to cover all relevant topics in sufficient depth We therefore decided to make our code examples public in the form of an R Package.
+Topics covered: 
+
+<ul>
+<li>R in a production environment</li>
+<li>Plotting charts with Plotly</li>
+<li>Shiny fundamentals</li> 
+</ul>
 
 Feel free to contact the package maintainer ([david\@dataim.nl](mailto:david@dataim.nl){.email}) for any technical matters or follow-up questions.
 
-## Getting started with the package
+## Getting started with the MIE2024 package
 
 <details>
 
@@ -36,7 +42,8 @@ Zip download: [<https://github.com/DataIMLabs/MIE2024/archive/refs/heads/main.zi
 
 <summary>Install package requirements (if needed)</summary>
 
-Most likely, 
+Most likely, the following packages are already installed. 
+If not, run the code below to install the required dependencies
 
 ``` r
 install.packages("plotly")
