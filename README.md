@@ -58,7 +58,32 @@ install.packages("rlang")
 
 </details>
 
- 
+
+## R in a production environment
+
+### Data handling 
+
+### Plotting
+
+
+## Shiny fundamentals
+A Shiny APP comprises the following parts: 
+
+```mermaid
+flowchart TD
+    ShinyAPP-->UI;
+    ShinyAPP-->S[Server];  
+    UI-->HTML
+    UI-->I[Input];
+    UI-->O[Output];
+    S-->Reactives
+    S-->Observers
+    S-->Modules
+    
+```
+
+
+### ShinyAPP 
  
  
  
