@@ -4,7 +4,7 @@
 \alias{exampleBarcharts}
 \title{exampleBarcharts}
 \usage{
-exampleBarcharts()
+exampleBarcharts(type = c("run", "view"))
 }
 \value{
 Opens a  Shiny app

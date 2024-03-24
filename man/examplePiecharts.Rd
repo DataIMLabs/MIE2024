@@ -4,7 +4,7 @@
 \alias{examplePiecharts}
 \title{examplePiecharts}
 \usage{
-examplePiecharts()
+examplePiecharts(type = c("run", "view"))
 }
 \value{
 Opens a  Shiny app
