@@ -3,6 +3,8 @@
 export("%>%")
 export(codeOutput)
 export(exampleBarcharts)
+export(exampleBenchmarkGroupMeans)
+export(exampleBenchmarkSubsetting)
 export(examplePiecharts)
 export(renderCode)
 importFrom(data.table,":=")

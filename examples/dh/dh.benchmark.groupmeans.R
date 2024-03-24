@@ -27,18 +27,7 @@ df <- data.frame(
 dt <- as.data.table(df)
 tb <- as_tibble(df)
 
-# Benchmarking data.table vs dplyr for filtering and summarizing
-benchmark.subsetting <- bench::mark(
-    data.table = {
-        dt[group == "a", .(mean_value = mean(value))]
-    },
-    dplyr = {
-        tb %>%
-            filter(group == "a") %>%
-            summarise(mean_value = mean(value))
-    },
-    check = FALSE, iterations = 30
-)
+ 
 
 benchmark.groupmeans <- bench::mark( 
     data.table = {
@@ -49,21 +38,25 @@ benchmark.groupmeans <- bench::mark(
     }, 
     dplyr = {
         df_with_diff <- df %>%
-          group_by(group) %>%
-          mutate(
-            mean_value = mean(value),  
-            diff = value - mean_value  
-          ) %>%
-          ungroup()        
+            group_by(group) %>%
+            mutate(
+                mean_value = mean(value),  
+                diff = value - mean_value  
+            ) %>%
+            ungroup()        
     },
     check = FALSE, iterations = 30
- 
+    
 ) 
 
-plotly::ggplotly(plot(benchmark.groupmeans))
+
+
+p <- plotly::ggplotly(plot(benchmark.groupmeans)) %>% 
+     plotly::layout(title = list(text = "\r\n\r\nBenchmark Groupmeans"))
+
+p
 
 
  
-
 
 
