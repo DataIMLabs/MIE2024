@@ -63,7 +63,30 @@ install.packages("rlang")
 
 ### Data handling 
 
+We strongly favor data.table syntax instead of traditional base R code or tidyverse syntax for data handling. 
+
+See the examples in examples/dh to illustrate: 
+
 ### Plotting
+
+```R
+
+ plot_ly(dt,
+    x      = ~type, 
+    y      = ~counts, 
+    type   = 'bar',
+    marker = list(
+        color = 'rgba(55, 128, 191, 0.6)',
+        line  = list(color = 'rgba(55, 128, 191, 1.0)', width = 1.5))
+    ) %>% 
+    layout(
+        title = list(text = ''),
+        xaxis = list(title = 'User type'),
+        yaxis = list(title = 'Aantal')
+    )
+
+```
+
 
 
 ## Shiny fundamentals
