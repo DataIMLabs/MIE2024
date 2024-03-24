@@ -77,10 +77,9 @@ install.packages("rlang")
 In a production environment, having a standardized way of organizing source code can save a lot of time. There are generally two ways of organizing R code, namely (a) stand alone script files and (b) a package. We strongly favor the package approach for anything that is more than a simple example. Next, we outline the main differences: 
 
 <details>
-<summary>**R as a scripting tool.**</summary>
-
+<summary>**R as a scripting tool.**</summary> 
 Using R as a scripting tool typically involves writing stand-alone script files executed in a sequential manner. Such scripts often start with library statements at the top to load necessary packages, followed by a mix of data manipulation, analysis, and visualization commands. This approach is suited for data analysis tasks where the workflow is linear, and the code is not intended for reuse or distribution. The audience for script files is generally analysts or data scientists who are conducting exploratory data analysis or developing a proof of concept.
-<details>
+</details>
 
 <details>
 <summary>**Organizing code in an R package.**</summary>
