@@ -1,6 +1,16 @@
-# MIE2024
+# MIE2024 Masterclass R & Shiny
 
 ## Introduction
+
+At the MIE2024 conference, we presented a brief masterclass on R and Shiny. 
+The masterclass was aimed at researchers working primarily with survey data. 
+
+As was to be expected, a masterclass of two 45min sessions can hardly cover all
+relevant topics in depth.
+
+We therefore decided to make our code examples public in the form of an R Package.
+
+Feel free to contact the package maintainer (david@dataim.nl) for any technical matters. 
 
 ## Getting started with the package
 
@@ -23,6 +33,8 @@ gh repo clone DataIMLabs/MIE2024
 <summary>Install package requirements (if needed)</summary>
 
 ``` R
+install.packages("plotly", "shiny")
+
 
 ``` 
 </details>
