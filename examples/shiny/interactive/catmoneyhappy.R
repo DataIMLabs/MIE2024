@@ -35,21 +35,21 @@ ui <- bslib::page_sidebar(
         card_body(plotlyOutput("plot"))   
     )  
 )
- 
+
 
 
 server <- function(input, output, session) {
     
     n <- 1000
-     
+    
     output$header <- renderText({
         
         title <- setNames(nm = names(vals.happy)) %>% setNames(vals.happy)
-             
+        
         paste0("Grafiek van ", title[[input$variable]], collapse = "");
         
     })
-     
+    
     # Generate some random data on the fly
     data <- data.table::data.table( 
         HASCAT  = factor(sample(x = c("yes", "no"), size=  n, replace = T), levels = c("yes", "no"))
@@ -60,7 +60,7 @@ server <- function(input, output, session) {
     
     data.filtered <- reactive({
         
-     
+        
         if(!is.null(input$catowner)){
             data[HASCAT %in% input$catowner, ]    
         } else {
@@ -71,7 +71,7 @@ server <- function(input, output, session) {
     })
     
     output$plot <- renderPlotly({ 
-          
+        
         # Quick summary table using data.table
         summaries <- data.filtered()[, list( M = mean(get(input$variable))), by = list(HASCAT)]
         
@@ -82,8 +82,8 @@ server <- function(input, output, session) {
             type   = "bar", 
             marker = list(color = 'lightblue')
         ) %>% layout( 
-                xaxis = list(title = "Values"),
-                yaxis = list(title = "Frequency")
+            xaxis = list(title = "Values"),
+            yaxis = list(title = "Frequency")
         ) 
     })  
 } 

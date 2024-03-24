@@ -30,7 +30,7 @@ ff.exampleBenchmark <- function(src){
     ) 
 } 
 
-ff.exampleCompareChart <- function(src){ 
+ff.exampleShiny <- function(src){ 
     
     force(src)
     
@@ -50,6 +50,19 @@ ff.exampleCompareChart <- function(src){
         }
     ) 
 } 
+
+
+exampleShinyInputs        <- ff.exampleShiny(src = "examples/shiny/inputs/shiny.inputs.R")
+
+#' exampleShinyCatMoneyHappy
+#'
+#' This example shows 
+#' @param type "run" or "view" 
+#' @return 
+#' @export
+#'
+#' @examples \dontrun{exampleShinyCatMoneyHappy()}
+exampleShinyCatMoneyHappy <- ff.exampleShiny(src = "examples/shiny/interactive/catmoneyhappy.R")
 
 
 #' exampleBenchmarkGroupMeans
@@ -79,7 +92,7 @@ exampleBenchmarkSubsetting <- ff.exampleBenchmark(src = "examples/dh/dh.benchmar
 #' @export
 #'
 #' @examples \dontrun{exampleBarcharts()}
-exampleBarcharts <- ff.exampleCompareChart(src = "examples/charting/barchart/barchart.compared.R")
+exampleBarcharts <- ff.exampleShiny(src = "examples/charting/barchart/barchart.compared.R")
 
 #' examplePiecharts
 #' 
@@ -88,7 +101,7 @@ exampleBarcharts <- ff.exampleCompareChart(src = "examples/charting/barchart/bar
 #' @export
 #'
 #' @examples \dontrun{examplePiecharts()}
-examplePiecharts <- ff.exampleCompareChart(src = "examples/charting/piechart/piechart.compared.R")
+examplePiecharts <- ff.exampleShiny(src = "examples/charting/piechart/piechart.compared.R")
     
  
 

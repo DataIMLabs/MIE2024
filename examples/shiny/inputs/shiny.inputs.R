@@ -1,3 +1,17 @@
+# ----------------------------------------------------------
+# Filename: shiny.inputs.R 
+# ---------------------------------------------------------- 
+#   Author: David Macro (david@dataim.nl)
+#     Date: 2024-03-24
+#  Purpose: Example of Different Shiny Inputs and some
+#           simple server logic
+# ----------------------------------------------------------
+# 
+#  
+rm(list = ls())
+
+options(shiny.port = 17004)
+
 library(shiny)
 library(bslib)
 library(plotly)
@@ -12,7 +26,8 @@ th <- htmltools::tags$th
 
 
 ui <- bslib::page_sidebar( fillable = T,
-    theme =  bslib::bs_theme(version = 5, bootswatch = "darkly"), 
+    title =  "Shiny inputs",
+    theme =  bslib::bs_theme(version = 5,  preset = "yeti"), 
     
     sidebar = bslib::sidebar(    
         
@@ -66,11 +81,7 @@ server <- function(input, output, session) {
             )
         )
     })
-    
-    input$temperature
-    
-    
-    
+     
 } 
 
 
