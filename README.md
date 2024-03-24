@@ -132,8 +132,20 @@ Shiny is a web application framework for R, allowing users to build interactive 
 The core advantage of Shiny is its ability to enable R users&emdash;who may not have web development experience&emdash;to deploy analyses or models as applications that can be shared on the web. This makes analytical results accessible to a broader audience, without requiring them to run R code locally.
 
 Shiny applications are built around two main components, namely the user interface (UI), which controls the layout and appearance of the app, and the server which includes the instructions to build the app's reactive (output) elements based on user input. 
+ 
+```mermaid
+flowchart TD
+    ShinyAPP-->UI;
+    ShinyAPP-->S[Server];  
+    UI-->HTML
+    UI-->I[Input];
+    UI-->O[Output];
+    S-->Reactives
+    S-->Observers
+    S-->Modules   
+```
 
-
+<details>
 <summary>Basic structure of a Shiny APP</summary>
 
 
@@ -153,22 +165,5 @@ shinyApp(ui, server)
 
 </details>
 
-A Shiny APP comprises the following parts: 
-
-```mermaid
-flowchart TD
-    ShinyAPP-->UI;
-    ShinyAPP-->S[Server];  
-    UI-->HTML
-    UI-->I[Input];
-    UI-->O[Output];
-    S-->Reactives
-    S-->Observers
-    S-->Modules
-    
-```
-
-<details>
- 
  
  
