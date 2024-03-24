@@ -1,7 +1,17 @@
- 
+# ----------------------------------------------------------
+# Filename: dh.benchmark.R 
+# ---------------------------------------------------------- 
+#   Author: David Macro (david@dataim.nl)
+#     Date: 2024-03-24
+#  Purpose: Show example of how to benchmark data
+# ----------------------------------------------------------
+# 
+rm(list=ls())
+
 library(data.table)
 library(dplyr)
 library(bench)
+library(plotly)
 
 # Creating a large dataset with 10 million rows
 set.seed(123)
@@ -48,9 +58,7 @@ benchmark.groupmeans <- bench::mark(
     },
     check = FALSE, iterations = 30
  
-)
-
-
+) 
 
 plotly::ggplotly(plot(benchmark.groupmeans))
 
