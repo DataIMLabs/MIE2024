@@ -26,7 +26,7 @@ Topics covered in this master class:
 
 Feel free to contact the package maintainer [david@dataim.nl](mailto:david@dataim.nl) for any technical matters or follow-up questions.
 
-## Getting started with the MIE2024 package
+## 0. Getting started with the MIE2024 package
 
 <details>
 <summary>Install R, RTools and RStudio</summary>
@@ -93,9 +93,7 @@ install.packages("rlang")
 ## 1. R in a production environment 
 
 <details>
-<summary>Stand-alone scripts vs R Packages</summary>
-
-In a production environment, having a standardized way of organizing source code can save a lot of time. There are generally two ways of organizing R code, namely (a) stand alone script files and (b) a package. We strongly favor the package approach for anything that is more than a simple example. Next, we outline the main differences: 
+<summary>1.1. Stand-alone scripts vs R Packages</summary>In a production environment, having a standardized way of organizing source code can save a lot of time. There are generally two ways of organizing R code, namely (a) stand alone script files and (b) a package. We strongly favor the package approach for anything that is more than a simple example. Next, we outline the main differences: 
 
 **R as a scripting tool.** 
 Using R as a scripting tool typically involves writing stand-alone script files executed in a sequential manner. Such scripts often start with library statements at the top to load necessary packages, followed by a mix of data manipulation, analysis, and visualization commands. This approach is suited for data analysis tasks where the workflow is linear, and the code is not intended for reuse or distribution. The audience for script files is generally analysts or data scientists who are conducting exploratory data analysis or developing a proof of concept.
@@ -107,15 +105,21 @@ The advantages of using the package methodology include enhanced code organizati
 
 Further reading: 
 
-[https://r-pkgs.org/]
-
+<ol>
+    <li>
+        [Comprehensive tutorial on creating R Packages](https://r-pkgs.org/)
+    </li>
+    <li>
+        [Information on version control](https://about.gitlab.com/topics/version-control/)
+    </li>
+</ol>
 
 
 </details>
 
 
 <details>
-<summary>Data handling </summary>
+<summary>1.2. Data handling </summary>
 Base R, tidyverse, and data.table are three prominent ecosystems in R for data manipulation and analysis, each catering to different preferences and requirements.
 
 Base R comes with R itself and providing a wide range of tools for statistical analysis, graphics, and general programming. Its audience includes statisticians, researchers, and R programmers who prefer a more traditional approach to data manipulation and analysis. The syntax in base R can be less intuitive for complex data manipulation tasks but offers a solid foundation for statistical analysis.
@@ -127,14 +131,18 @@ Data.table excels in performance, particularly for large datasets, due to its de
 Further reading: 
 
 <ul>
- <li>the example scripts in the examples/dh folder of the MIE2024 package.</li>
- <li>[Comparison between base, tidy and data.table](https://jtr13.github.io/cc21fall2/comparison-among-base-r-tidyverse-and-datatable.html])</li>
+ <li>
+    the example scripts in the examples/dh folder of the MIE2024 package.
+ </li>
+ <li>
+    [Comparison between base, tidy and data.table](https://jtr13.github.io/cc21fall2/comparison-among-base-r-tidyverse-and-datatable.html)
+  </li>
 </ul>
 
 </details>
  
 <details>
-<summary>Plotting charts</summary>
+<summary>1.3. Plotting charts</summary>
 
 ```R
 
