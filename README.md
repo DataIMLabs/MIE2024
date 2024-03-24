@@ -36,42 +36,22 @@ Zip download: [<https://github.com/DataIMLabs/MIE2024/archive/refs/heads/main.zi
 
 <summary>Install package requirements (if needed)</summary>
 
+Most likely, 
+
 ``` r
-install.packages("plotly", "shiny")
+install.packages("plotly")
+install.packages("shiny")
+install.packages("data.table")
+install.packages("magrittr")
+install.packages("ggplot2")
+install.packages("devtools")
+install.packages("purrr")
+install.packages("rlang")
 ```
 
 </details>
 
-
-```stl
-solid cube_corner
-  facet normal 0.0 -1.0 0.0
-    outer loop
-      vertex 0.0 0.0 0.0
-      vertex 1.0 0.0 0.0
-      vertex 0.0 0.0 1.0
-    endloop
-  endfacet
-  facet normal 0.0 0.0 -1.0
-    outer loop
-      vertex 0.0 0.0 0.0
-      vertex 0.0 1.0 0.0
-      vertex 1.0 0.0 0.0
-    endloop
-  endfacet
-  facet normal -1.0 0.0 0.0
-    outer loop
-      vertex 0.0 0.0 0.0
-      vertex 0.0 0.0 1.0
-      vertex 0.0 1.0 0.0
-    endloop
-  endfacet
-  facet normal 0.577 0.577 0.577
-    outer loop
-      vertex 1.0 0.0 0.0
-      vertex 0.0 1.0 0.0
-      vertex 0.0 0.0 1.0
-    endloop
-  endfacet
-endsolid
-```
+ 
+ 
+ 
+ 
