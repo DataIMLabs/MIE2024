@@ -54,7 +54,7 @@ geom_bar(
 ) +
 theme_minimal()
 
-
+ 
 "
 
 ui <- bslib::page_fixed( 
