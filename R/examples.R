@@ -8,6 +8,50 @@
 # 
 #  
 
+ff.exampleBenchmark <- function(src){ 
+    
+    force(src)
+    
+    return(
+        function(type = c("run", "view")){
+            
+            devtools::wd(".")
+            
+            type <- type[[1]]
+            type <- match.arg(type, several.ok = F)
+            
+            if(type == "run"){
+                source(src) 
+                p
+            } else {
+                rstudioapi::navigateToFile(src)
+            }  
+        }
+    ) 
+} 
+
+ff.exampleCompareChart <- function(src){ 
+    
+    force(src)
+    
+    return(
+        function(type = c("run", "view")){
+            
+            devtools::wd(".")
+            
+            type <- type[[1]]
+            type <- match.arg(type, several.ok = F)
+            
+            if(type == "run"){
+                shiny::runApp(src)  
+            } else {
+                rstudioapi::navigateToFile(src)
+            }  
+        }
+    ) 
+} 
+
+
 #' exampleBenchmarkGroupMeans
 #'
 #' This example shows the result of a benchmark between dplyr and data.table on comparing group means. 
@@ -16,12 +60,8 @@
 #' @export
 #'
 #' @examples \dontrun{exampleBenchmarkGroupMeans()}
-exampleBenchmarkGroupMeans<- function(){
-    devtools::wd(".")
-    source("examples/dh/dh.benchmark.groupmeans.R")
-    p
-}
-
+exampleBenchmarkGroupMeans <- ff.exampleBenchmark(src = "examples/dh/dh.benchmark.groupmeans.R")
+     
 #' exampleBenchmarkSubsetting
 #'
 #' This example shows the result of a benchmark between dplyr and data.table on subsetting a large data set. 
@@ -30,13 +70,7 @@ exampleBenchmarkGroupMeans<- function(){
 #' @export
 #'
 #' @examples \dontrun{exampleBenchmarkSubsetting()}
-exampleBenchmarkSubsetting<- function(){
-    devtools::wd(".")
-    source("examples/dh/dh.benchmark.subsetting.R")
-    p
-}
-
-
+exampleBenchmarkSubsetting <- ff.exampleBenchmark(src = "examples/dh/dh.benchmark.subsetting.R")
 
 #' exampleBarcharts
 #'
@@ -45,21 +79,7 @@ exampleBenchmarkSubsetting<- function(){
 #' @export
 #'
 #' @examples \dontrun{exampleBarcharts()}
-exampleBarcharts <- function(type = c("run", "view")){
-    
-    devtools::wd(".")
-    
-    type <- type[[1]]
-    type <- match.arg(type, several.ok = F)
-    
-    src <- "examples/charting/barchart/barchart.compared.R"
-    
-    if(type == "run"){
-        shiny::runApp(src)    
-    } else {
-        rstudioapi::navigateToFile(src)
-    } 
-}
+exampleBarcharts <- ff.exampleCompareChart(src = "examples/charting/barchart/barchart.compared.R")
 
 #' examplePiecharts
 #' 
@@ -68,21 +88,7 @@ exampleBarcharts <- function(type = c("run", "view")){
 #' @export
 #'
 #' @examples \dontrun{examplePiecharts()}
-examplePiecharts <- function(type = c("run", "view")){
+examplePiecharts <- ff.exampleCompareChart(src = "examples/charting/piechart/piechart.compared.R")
     
-    devtools::wd(".")
-    
-    type <- type[[1]]
-    type <- match.arg(type, several.ok = F)
-    
-    src <- "examples/charting/piechart/piechart.compared.R"
-    
-    if(type == "run"){
-        shiny::runApp(src)    
-    } else {
-        rstudioapi::navigateToFile(src)
-    }
-     
-    
-}
+ 
 

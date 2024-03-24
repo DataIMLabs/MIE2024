@@ -4,7 +4,7 @@
 \alias{exampleBenchmarkGroupMeans}
 \title{exampleBenchmarkGroupMeans}
 \usage{
-exampleBenchmarkGroupMeans()
+exampleBenchmarkGroupMeans(type = c("run", "view"))
 }
 \value{
 Show a Plotly plot of the benchmark'

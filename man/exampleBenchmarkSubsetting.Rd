@@ -4,7 +4,7 @@
 \alias{exampleBenchmarkSubsetting}
 \title{exampleBenchmarkSubsetting}
 \usage{
-exampleBenchmarkSubsetting()
+exampleBenchmarkSubsetting(type = c("run", "view"))
 }
 \value{
 Show a Plotly plot of the benchmark'
