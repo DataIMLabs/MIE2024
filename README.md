@@ -84,6 +84,9 @@ flowchart TD
 
 <details>
 
+<summary>Basic structure of a Shiny APP</summary>
+
+
 ``` R
 library(shiny)
 
